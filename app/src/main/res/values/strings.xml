@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Lab2</string>
+    <string name="app_name">Hello, this is Lab2</string>
+    <string name="input_text"></string>
+    <string name="btn_calculate_caption">Calculate!</string>
+    <string name="tvw_input">Input text</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>
