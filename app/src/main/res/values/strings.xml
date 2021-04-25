@@ -3,14 +3,9 @@
     <string name="btn_calculate_caption">Calculate!</string>
     <string name="ed_input"></string>
     <string name="tvw_result"></string>
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string name="msg_no_text">There is no text</string>
+    <string-array name="counter_array">
+        <item>Chars</item>
+        <item>Words</item>
     </string-array>
 </resources>

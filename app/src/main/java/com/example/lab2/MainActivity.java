@@ -25,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.ddSelection = (Spinner) findViewById(R.id.ddSelection);
-        ArrayList<String> selectionOptionsList = new ArrayList<>();
-        selectionOptionsList.add("Words");
-        selectionOptionsList.add("Chars");
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, selectionOptionsList);
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.counter_array, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.ddSelection.setAdapter(arrayAdapter);
     }
@@ -40,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         String selection = this.ddSelection.getSelectedItem().toString();
         if (userInputText.isEmpty()) {
-            Toast.makeText(getApplicationContext(),"There is no text", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.msg_no_text, Toast.LENGTH_SHORT).show();
+            tvOutput.setText(R.string.tvw_result);
         }
         else if(selection.equalsIgnoreCase("Chars")){
             int count = getCharsCount(userInputText);
