@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Hello, this is Lab2</string>
-    <string name="input_text"></string>
     <string name="btn_calculate_caption">Calculate!</string>
-    <string name="tvw_input">Input text</string>
+    <string name="ed_input"></string>
+    <string name="tvw_result"></string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
