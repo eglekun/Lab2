@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         String selection = this.ddSelection.getSelectedItem().toString();
         if (userInputText.isEmpty()) {
-            tvOutput.setText("Tuscia");
+            Toast.makeText(getApplicationContext(),"There is no text", Toast.LENGTH_SHORT).show();
         }
         else if(selection.equalsIgnoreCase("Chars")){
             int count = getCharsCount(userInputText);
