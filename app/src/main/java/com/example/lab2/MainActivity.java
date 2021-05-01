@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
 import static com.example.lab2.utils.ElementsCalculator.getCharsCount;
 import static com.example.lab2.utils.ElementsCalculator.getWordsCount;
 
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.ddSelection = (Spinner) findViewById(R.id.ddSelection);
-        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.counter_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.counterArray, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.ddSelection.setAdapter(arrayAdapter);
     }
@@ -36,15 +34,18 @@ public class MainActivity extends AppCompatActivity {
         String userInputText = edUserInput.getText().toString();
 
         String selection = this.ddSelection.getSelectedItem().toString();
+
+        String[] stringArray = getResources().getStringArray(R.array.counterArray);
+
         if (userInputText.isEmpty()) {
-            Toast.makeText(getApplicationContext(), R.string.msg_no_text, Toast.LENGTH_SHORT).show();
-            tvOutput.setText(R.string.tvw_result);
+            Toast.makeText(getApplicationContext(), R.string.msgNoText, Toast.LENGTH_SHORT).show();
+            tvOutput.setText(R.string.tvResult);
         }
-        else if(selection.equalsIgnoreCase("Chars")){
+        else if(selection.equalsIgnoreCase(stringArray[0].toString())){
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
         }
-        else if(selection.equalsIgnoreCase("Words")) {
+        else if(selection.equalsIgnoreCase(stringArray[1].toString())) {
             int count = getWordsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
         }

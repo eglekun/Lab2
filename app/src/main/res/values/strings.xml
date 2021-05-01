@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Hello, this is Lab2</string>
-    <string name="btn_calculate_caption">Calculate!</string>
-    <string name="ed_input"></string>
-    <string name="tvw_result"></string>
-    <string name="msg_no_text">There is no text</string>
-    <string-array name="counter_array">
+    <string name="appName">Hi, let\'s count!</string>
+    <string name="btnCalculateCaption">Calculate!</string>
+    <string name="edInput"></string>
+    <string name="tvResult"></string>
+    <string name="msgNoText">There is no text</string>
+    <string-array name="counterArray">
         <item>Chars</item>
         <item>Words</item>
     </string-array>
